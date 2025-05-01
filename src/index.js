@@ -1,14 +1,25 @@
 import "./styles.css";
 import loadHomeContent from "./home";
+import loadMenuContent from "./menu";
 
 const contentContainer = document.querySelector('#content');
 
-const homeButton = document.querySelector('.home-button');
-homeButton.addEventListener('click', (e) => {
-    loadPage(loadHomeContent);
-    document.querySelector('.active-button').classList.remove('active-button');
-    e.target.classList += ' active-button';
+const navButtons = document.querySelectorAll('button');
+navButtons.forEach((button) => {
+    button.addEventListener('click', () => navButtonHandler(button));
 });
+
+
+function navButtonHandler(navButton) {
+    if (navButton.className.includes('home')) {
+        loadPage(loadHomeContent);
+    } else if (navButton.className.includes('menu')) {
+        loadPage(loadMenuContent);
+    }
+
+    document.querySelector('.active-button').classList.remove('active-button');
+    navButton.classList += ' active-button';
+}
 
 
 function loadPage(loadContent) {
