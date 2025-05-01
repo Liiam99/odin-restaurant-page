@@ -155,3 +155,26 @@ nav button:hover {
     border-radius: 20px;
     border: 2px solid var(--secondary-colour);
 }
+
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#contact div {
+  max-width: 30%;
+  font-size: 1.5rem;
+  font-style: italic;
+  text-align: center;
+  text-wrap: balance;
+}
+
+#contact div p:first-child{
+  margin-bottom: 20px;
+}
+
+#contact img {
+  border-radius: 10px;
+}

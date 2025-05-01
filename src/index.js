@@ -1,4 +1,5 @@
 import "./styles.css";
+import loadContactContent from "./contact";
 import loadHomeContent from "./home";
 import loadMenuContent from "./menu";
 
@@ -15,6 +16,8 @@ function navButtonHandler(navButton) {
         loadPage(loadHomeContent);
     } else if (navButton.className.includes('menu')) {
         loadPage(loadMenuContent);
+    } else if (navButton.className.includes('contact')) {
+        loadPage(loadContactContent);
     }
 
     document.querySelector('.active-button').classList.remove('active-button');
