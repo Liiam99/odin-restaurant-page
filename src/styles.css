@@ -82,6 +82,10 @@ nav button:hover {
     cursor: pointer;
 }
 
+.active-button {
+    text-decoration: underline;
+}
+
 #content {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/230484/pexels-photo-230484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
@@ -113,6 +117,7 @@ nav button:hover {
     text-wrap: balance;
     text-align: center;
     font-style: italic;
+    font-size: 1.2rem;
 }
 
 #home p:first-of-type {
